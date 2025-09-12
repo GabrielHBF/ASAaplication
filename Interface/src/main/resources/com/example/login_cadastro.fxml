@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane stylesheets="@/CSS/styleApp.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.HelloController">
+
+    <!-- FORMULÁRIOS DE LOGIN E CADASTRO -->
+    <center>
+        <StackPane id="card">
+
+                                                                        <VBox alignment="CENTER" spacing="6" translateY="220">
+                <ImageView fx:id="logoImagefootter" fitHeight="150" fitWidth="150" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                    <image>
+                        <Image url="@/images/ASA-Braca.png" />
+                    </image>
+                    <effect>
+                        <DropShadow radius="10" spread="0.15" />
+                    </effect>
+                </ImageView>
+                <Label styleClass="footer" text="© 2025 MyApp. Todos os direitos reservados." />
+            </VBox>
+            <TabPane id="tabPane" prefHeight="67.0" prefWidth="242.0" tabClosingPolicy="UNAVAILABLE" StackPane.alignment="TOP_CENTER">
+                <!-- ABA LOGIN -->
+                <tabs>
+                    <Tab text="Login">
+                        <content>
+                            <GridPane hgap="10" prefHeight="188.0" prefWidth="242.0" vgap="12">
+                                <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                </padding>
+
+                                <Label text="Email:" />
+                                <TextField fx:id="loginEmail" promptText="seu@exemplo.com" GridPane.columnIndex="1" />
+
+                                <Label text="Senha:" GridPane.rowIndex="1" />
+                                <PasswordField fx:id="loginPassword" promptText="••••••••" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <CheckBox fx:id="rememberMe" text="Lembrar-me" />
+                                    <Region HBox.hgrow="ALWAYS" />
+                                    <Hyperlink fx:id="forgotLink" text="Esqueci a senha" />
+                                </HBox>
+
+                                <Button fx:id="btnLogin" maxWidth="Infinity" text="Entrar" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <columnConstraints>
+                           <ColumnConstraints />
+                           <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints maxHeight="50.0" minHeight="19.0" prefHeight="25.0" />
+                           <RowConstraints maxHeight="31.0" minHeight="0.0" prefHeight="25.0" />
+                           <RowConstraints />
+                           <RowConstraints />
+                           <RowConstraints />
+                        </rowConstraints>
+                            </GridPane>
+                        </content>
+                    </Tab>
+
+                    <!-- ABA CADASTRO -->
+                    <Tab text="Cadastro">
+                        <content>
+                            <GridPane hgap="10" vgap="12">
+                                <padding>
+                                    <Insets bottom="20" left="10" right="10" top="20" />
+                                </padding>
+
+                                <Label text="Nome completo:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <TextField fx:id="regName" promptText="Seu nome" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                                <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                <TextField fx:id="regEmail" promptText="seu@exemplo.com" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                <Label text="Senha:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                <PasswordField fx:id="regPassword" promptText="Escolha uma senha" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                                <Label text="Confirmar senha:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                                <PasswordField fx:id="regPasswordConfirm" promptText="Repita a senha" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                                <CheckBox fx:id="acceptTerms" text="Aceito os termos de uso" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                                <Button fx:id="btnRegister" maxWidth="Infinity" text="Criar conta" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <columnConstraints>
+                           <ColumnConstraints />
+                           <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints />
+                           <RowConstraints />
+                           <RowConstraints />
+                           <RowConstraints />
+                           <RowConstraints />
+                           <RowConstraints />
+                        </rowConstraints>
+                            </GridPane>
+                        </content>
+                    </Tab>
+                </tabs>
+            <StackPane.margin>
+               <Insets />
+            </StackPane.margin>
+            </TabPane>
+        </StackPane>
+    </center>
+
+</BorderPane>

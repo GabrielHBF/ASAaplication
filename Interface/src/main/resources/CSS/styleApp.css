@@ -1,0 +1,74 @@
+/* Estilos globais e background */
+.root {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0F172A, #1E293B);
+}
+
+/* Sidebar */
+#sidebar {
+    -fx-padding: 40;
+    -fx-alignment: CENTER_LEFT;
+    -fx-pref-width: 100%;
+}
+#sidebar .title {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+#sidebar .subtitle {
+    -fx-text-fill: #CBD5E1;
+    -fx-font-size: 12px;
+}
+
+/* Card central */
+#card {
+    -fx-background-color: rgba(255,255,255,0.06);
+    -fx-background-radius: 16;
+    -fx-effect: dropshadow(one-pass-box, rgba(2,6,23,0.6), 15, 0.0, 0, 6);
+    -fx-padding: 24;
+}
+
+/* TabPane */
+#tabPane {
+    -fx-tab-min-width: 130;
+    -fx-tab-max-width: 140;
+    -fx-tab-padding: 4;
+}
+#tabPane .tab {
+    -fx-background-color: rgba(0, 1, 7, 0.6);
+    -fx-text-base-color: #CBD5E1;
+    -fx-font-weight: 600;
+}
+#tabPane .tab:selected {
+    -fx-background-color:#2563EB ;
+    -fx-text-base-color: white;
+}
+
+/* Labels de campo */
+Label {
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+}
+
+/* Botões principais */
+Button {
+    -fx-background-color: #3B82F6;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+}
+Button:hover {
+    -fx-background-color: #2563EB;
+}
+
+/* Rodapé */
+.footer {
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+}
+
+#rememberMe{
+    -fx-text-fill: white;
+}
+#acceptTerms{
+    -fx-text-fill: white;
+}
