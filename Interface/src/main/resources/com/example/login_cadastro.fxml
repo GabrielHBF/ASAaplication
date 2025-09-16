@@ -36,7 +36,7 @@
                         <DropShadow radius="10" spread="0.15" />
                     </effect>
                 </ImageView>
-                <Label styleClass="footer" text="© 2025 MyApp. Todos os direitos reservados." />
+                <Label styleClass="footer" text="© 2025 ASA application. Todos os direitos reservados." />
             </VBox>
             <TabPane id="tabPane" prefHeight="67.0" prefWidth="242.0" tabClosingPolicy="UNAVAILABLE" StackPane.alignment="TOP_CENTER">
                 <!-- ABA LOGIN -->
@@ -60,7 +60,7 @@
                                     <Hyperlink fx:id="forgotLink" text="Esqueci a senha" />
                                 </HBox>
 
-                                <Button fx:id="btnLogin" maxWidth="Infinity" text="Entrar" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                <Button fx:id="btnLogin" maxWidth="Infinity" onAction="#logar" text="Entrar" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                         <columnConstraints>
                            <ColumnConstraints />
                            <ColumnConstraints />
@@ -98,7 +98,7 @@
 
                                 <CheckBox fx:id="acceptTerms" text="Aceito os termos de uso" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 
-                                <Button fx:id="btnRegister" maxWidth="Infinity" text="Criar conta" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                <Button fx:id="btnRegister" maxWidth="Infinity" onAction="#cadastrar" text="Criar conta" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                         <columnConstraints>
                            <ColumnConstraints />
                            <ColumnConstraints />

@@ -2,10 +2,11 @@ package com.example;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import model.Conexao;
+import javafx.scene.image.ImageView;
+import model.Verificação;
+import model.comandoSql;
 
-import javax.swing.text.html.ImageView;
-import java.sql.PreparedStatement;
+import static model.Verificação.verifica;
 
 public class HelloController {
     @FXML
@@ -45,6 +46,42 @@ public class HelloController {
     private CheckBox rememberMe;
 
 
+    @FXML
+    public void logar() {
+
+        Verificação verificação = new Verificação();
+        verificação.Verificação(loginEmail.getText(),loginPassword.getText());
+
+        if(verifica){
+            System.out.println("Login ok: ");
+        }else {
+            System.out.println("Email ou senha incorretos!");
+        }
+    }
+
+    public void cadastrar(){
+        if(regPassword.getText().equals(regPasswordConfirm.getText())){
+
+        comandoSql insert = new comandoSql();
+
+            if(!(insert.selectComand(regEmail.getText()))) {
+
+                if(acceptTerms.isSelected()) {
+
+                    insert.insertComand(regName.getText(), regEmail.getText(), regPassword.getText());
+
+                }else {
+                    System.out.println("Aceite os termos pra prosseguir");
+                }
+
+            }else {
+                System.out.println("Email ja sendo utilizado!");
+            }
+
+        }else {
+            System.out.println("As senhas não correspondem!");
+        }
+    }
 
 
 
