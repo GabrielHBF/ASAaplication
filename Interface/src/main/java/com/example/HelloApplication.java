@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.util.Objects;
 import javafx.scene.image.Image;
 
+import static model.Verificação.verifica;
+
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
@@ -21,5 +23,6 @@ public class HelloApplication extends Application {
         stage.getIcons().add(icon);
         stage.setScene(scene);
         stage.show();
+
     }
 }

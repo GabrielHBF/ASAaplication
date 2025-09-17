@@ -1,0 +1,83 @@
+
+.root-pane {
+    -fx-background-color: #1E293B;
+}
+.main-content-pane {
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 4);
+}
+
+
+.header-bar {
+    -fx-background-color: #1E293B;
+    -fx-padding: 8 10;
+    -fx-alignment: center-left;
+    -fx-spacing: 10;
+}
+
+.app-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.menu-button, .filter-button, .search-button {
+    -fx-background-color: #81C784;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 6 12;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.menu-button:hover, .filter-button:hover, .search-button:hover {
+    -fx-background-color: #A5D6A7;
+}
+
+
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-padding: 4 0;
+}
+
+.task-list {
+    -fx-background-color: white;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+
+.add-task-bar {
+    -fx-background-color: #F0F0F0;
+    -fx-padding: 8;
+    -fx-spacing: 8;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.add-task-bar TextField {
+    -fx-font-size: 13px;
+    -fx-padding: 6;
+    -fx-border-color: #CCCCCC;
+    -fx-border-radius: 5;
+}
+
+.add-task-button {
+    -fx-background-color: #FFA726;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-padding: 6 15;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.add-task-button:hover {
+    -fx-background-color: #FFB74D;
+}
+

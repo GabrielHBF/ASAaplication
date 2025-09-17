@@ -1,8 +1,12 @@
 package com.example;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 import model.Verificação;
 import model.comandoSql;
 
@@ -53,7 +57,20 @@ public class HelloController {
         verificação.Verificação(loginEmail.getText(),loginPassword.getText());
 
         if(verifica){
-            System.out.println("Login ok: ");
+            try{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("home.fxml"));
+            Parent root = fxmlLoader.load();
+
+            Stage stage = (Stage) btnLogin.getScene().getWindow();
+
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.show();
+
+            }catch(Exception e){
+                e.printStackTrace();
+            }
         }else {
             System.out.println("Email ou senha incorretos!");
         }
